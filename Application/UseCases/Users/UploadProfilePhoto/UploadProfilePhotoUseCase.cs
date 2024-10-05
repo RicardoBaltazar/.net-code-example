@@ -18,7 +18,6 @@ namespace Application.UseCases.Users.UploadProfilePhoto
         {
             var fileStream = file.OpenReadStream();
 
-            // var isImage = FileTypeValidator.IsImage(fileStream);
             var isImage = fileStream.Is<JointPhotographicExpertsGroup>();
 
             if (isImage == false)

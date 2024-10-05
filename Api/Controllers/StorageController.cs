@@ -18,7 +18,6 @@ namespace Api.Controllers
         public IActionResult UploadImage(IFormFile file)
         {
             _uploadProfilePhotoUseCase.Execute(file);
-            // return Created(string.Empty);
             return Ok("Upload realizado");
         }
     }

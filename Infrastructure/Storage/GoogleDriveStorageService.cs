@@ -8,9 +8,10 @@ namespace Infrastructure.Storage
     {
         public string Upload(IFormFile file, User<T> user)
         {
+            throw new NotImplementedException();
+
             var service = new DriveService();
             // Implementação do método Upload
-            // throw new NotImplementedException();
 
             var driveFile = new Google.Apis.Drive.v3.Data.File
             {
@@ -25,7 +26,8 @@ namespace Infrastructure.Storage
             if (response.Status is not Google.Apis.Upload.UploadStatus.Completed or Google.Apis.Upload.UploadStatus.NotStarted)
                 throw new Exception();
 
-            return command.ResponseBody.Id;
+            // return command.ResponseBody.Id;
+            return "Simulando upload realizado";
         }
     }
 }
